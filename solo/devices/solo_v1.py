@@ -66,7 +66,7 @@ class Client(SoloClient):
 
         self.ctap1 = CTAP1(dev)
         try:
-            self.ctap2 = CTAP2(dev)
+            self.ctap2 = CTAP2(dev, strict_cbor=False)
         except CtapError:
             self.ctap2 = None
 
